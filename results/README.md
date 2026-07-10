@@ -4,7 +4,7 @@ This directory contains the aggregated CSV performance tables, metrics, explaina
 
 1.  **Baseline**: Deterministic rule-based SMC/Wyckoff bot.
 2.  **RMDB**: Risk-Managed Deterministic Baseline (rules + risk gates).
-3.  **Random Forest (RF)**: Supervised ML bagging baseline (walk-forward classifier + risk gates).
+3.  **Support Vector Machine (SVM)**: Supervised ML boundary baseline (walk-forward classifier + risk gates).
 4.  **XGBoost**: Supervised ML boosting baseline (walk-forward classifier + SHAP interpretability + risk gates).
 5.  **LLM Agent**: Language model reasoning agent (Llama-3.3-70B + risk gates).
 
@@ -16,9 +16,12 @@ This directory contains the aggregated CSV performance tables, metrics, explaina
 results/
 ├── README.md                          # This documentation file
 ├── table2_combined.csv                # Consolidated Table II (Baseline vs RMDB vs RF vs XGBoost vs LLM)
-├── rf/                                # Random Forest outputs
-│   ├── aggregate_performance.csv      # Individual RF run metrics (18 rows)
-│   └── trade_diagnostics.csv          # Table V: Average trades, win rates, and hold times for RF
+├── svm/                               # Support Vector Machine outputs
+│   ├── aggregate_performance.csv      # Individual SVM run metrics (18 rows)
+│   ├── trade_diagnostics.csv          # Table V: Average trades, win rates, and hold times for SVM
+│   ├── svm_feature_importance.csv     # SVM individual feature importance (Permutation-based)
+│   ├── svm_feature_importance.png     # Feature importance bar plot
+│   └── svm_group_importance.png       # Grouped feature importance bar plot
 └── xgboost/                           # XGBoost outputs
     ├── aggregate_performance.csv      # Individual XGBoost run metrics (18 rows)
     ├── trade_diagnostics.csv          # Table V: Average trades, win rates, and hold times for XGBoost
@@ -41,18 +44,18 @@ results/
 *   **Target Table**: **Table II** (Consolidated performance averages across scenarios).
 *   **Description**: Combines and averages the daily returns, drawdown, Sharpe, and Sortino metrics across all test windows and assets for each of the 5 systems and scenarios.
 *   **Columns**:
-    *   `system`: "Baseline", "RMDB", "RF", "XGBoost", or "LLM".
+    *   `system`: "Baseline", "RMDB", "SVM", "XGBoost", or "LLM".
     *   `scenario`: "S0" (dynamic ATR slippage), "S1" (0.05% fixed), "S2" (0.10% fixed).
     *   `mean_return`: Mean daily portfolio return (%).
     *   `mdd`: Mean Maximum Drawdown (%).
     *   `sharpe`: Sharpe ratio (annualized, risk-free rate = 0).
     *   `sortino`: Sortino ratio (annualized, risk-free rate = 0).
 
-### B. Trade Diagnostics (`results/rf/trade_diagnostics.csv` and `results/xgboost/trade_diagnostics.csv`)
+### B. Trade Diagnostics (`results/svm/trade_diagnostics.csv` and `results/xgboost/trade_diagnostics.csv`)
 *   **Target Table**: **Table V** (Trade execution metrics).
 *   **Description**: Summarizes trade counts, win ratios, and average holding times per slippage scenario for the ML models.
 *   **Columns**:
-    *   `system`: "RF" or "XGBoost".
+    *   `system`: "SVM" or "XGBoost".
     *   `scenario`: "S0", "S1", "S2".
     *   `trades_per_run`: Average number of closed trades per run.
     *   `win_rate`: Percentage of profitable trades (%).
@@ -67,7 +70,7 @@ results/
 
 ### D. MDD Advantage Counts (`results/xgboost/mdd_advantage_counts.csv`)
 *   **Target Table**: **Table III** (Risk governance comparative counts).
-*   **Description**: Counts the number of times (out of 6 test combinations) XGBoost achieved a lower Maximum Drawdown or higher return compared to Baseline, RMDB, RF, and LLM systems.
+*   **Description**: Counts the number of times (out of 6 test combinations) XGBoost achieved a lower Maximum Drawdown or higher return compared to Baseline, RMDB, SVM, and LLM systems.
 
 ---
 
@@ -75,14 +78,14 @@ results/
 
 If you add new completed backtest directories to `data-backtest/` or modify the training features, you can fully rebuild all CSV tables in this directory using the following sequence:
 
-1.  **Run Random Forest baseline**:
+1.  **Run SVM baseline**:
     ```bash
-    python rf_baseline.py
+    python svm_baseline.py
     ```
-    This generates the `RF` backtest directories under `data-backtest/` and summaries under `results/rf/`.
+    This generates the `SVM` backtest directories under `data-backtest/` and summaries under `results/svm/`.
 
 2.  **Run XGBoost baseline and aggregator**:
     ```bash
     python xgboost_baseline.py
     ```
-    This generates the `XGBoost` backtest directories under `data-backtest/`, performs the SHAP explainability analysis and plotting, scans all completed backtests (Baseline, RMDB, RF, LLM), and recompiles the unified comparison file `table2_combined.csv` and advantage counts.
+    This generates the `XGBoost` backtest directories under `data-backtest/`, performs the SHAP explainability analysis and plotting, scans all completed backtests (Baseline, RMDB, SVM, LLM), and recompiles the unified comparison file `table2_combined.csv` and advantage counts.

@@ -1,0 +1,20 @@
++------------------+------------------+
+| Metric           | Value            |
++------------------+------------------+
+| Model            | XGBoost Baseline |
+| Asset            | Gold             |
+| Crisis Period    | 2024-2025 (S0)   |
+| Initial Capital  | $1,000.00        |
+| Final Capital    | $1,344.46        |
+| Net Profit       | +$344.46         |
+| Return %         | +34.45%          |
+| Total Trades     | 78               |
+| Win Rate         | 33.3%            |
+| Profit Factor    | 3.61             |
+| Sharpe Ratio     | 1.35             |
+| Sortino Ratio    | 6.04             |
+| Maximum Drawdown | 2.77%            |
+| Recovery Factor  | 12.42            |
+| VaR/CVaR (95%)   | 0.09% / 0.32%    |
+| Avg Holding Time | 3.2d             |
++------------------+------------------+

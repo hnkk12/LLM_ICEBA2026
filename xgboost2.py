@@ -23,8 +23,8 @@ warnings.filterwarnings("ignore")
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 ASSETS = {
-    "AAPL": PROJECT_ROOT / "dataset_robust" / "AAPL_D_2004_2023_ROBUST.csv",
-    "Gold": PROJECT_ROOT / "dataset_robust" / "GOLD_D_2004_2023_ROBUST.csv",
+    "AAPL": PROJECT_ROOT / "dataset_robust" / "AAPL_D_2004_2025_ROBUST.csv",
+    "Gold": PROJECT_ROOT / "dataset_robust" / "GOLD_D_2004_2025_ROBUST.csv",
 }
 
 STRESS_WINDOWS = {
@@ -45,6 +45,12 @@ STRESS_WINDOWS = {
         "train_end":   "2021-12-31",
         "test_start":  "2022-01-01",
         "test_end":    "2023-12-31",
+    },
+    "2024-2025": {
+        "train_start": "2021-01-01",
+        "train_end":   "2023-12-31",
+        "test_start":  "2024-01-01",
+        "test_end":    "2025-12-31",
     },
 }
 
@@ -766,8 +772,8 @@ def generate_mdd_advantage_counts(xgb_agg_df: pd.DataFrame):
             if "xgboost" in model_name.lower():
                 # We already have XGBoost from current run
                 continue
-            elif "random forest" in model_name.lower() or "rf" in model_name.lower():
-                system = "RF"
+            elif "svm" in model_name.lower():
+                system = "SVM"
             elif "risk-managed" in model_name.lower():
                 system = "RMDB"
             elif "baseline" in model_name.lower():
@@ -833,7 +839,7 @@ def generate_mdd_advantage_counts(xgb_agg_df: pd.DataFrame):
 
     adv_rows = []
     
-    for ref_system in ["Baseline", "RMDB", "LLM", "RF"]:
+    for ref_system in ["Baseline", "RMDB", "LLM", "SVM"]:
         ref_df = others_df[others_df["system"] == ref_system]
         if ref_df.empty:
             logging.warning(f"No completed runs found for system: {ref_system}. Skipping comparison.")

@@ -1,4 +1,5 @@
 scenario,ref,mdd_wins,ret_wins,mdd_adv
-S0,vs RF,0,5,-2.3829
-S1,vs RF,0,5,-1.7221
-S2,vs RF,0,5,-1.7763
+S0,vs LLM,6,6,12.1583
+S0,vs SVM,0,6,-2.0398
+S1,vs SVM,1,6,-1.3127
+S2,vs SVM,1,6,-1.3556

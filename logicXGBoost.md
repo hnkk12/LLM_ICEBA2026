@@ -15,7 +15,7 @@ The XGBoost Baseline Bot is a **supervised machine learning control model** desi
 ```
 Baseline (Technical Rules)
   → RMDB (Rules + Risk Gates)                  ← Isolates impact of Risk Gates
-    → Random Forest (ML Bagging + Risk Gates)   ← Isolates Bagging vs Boosting
+    → SVM (RBF Kernel Boundary + Risk Gates)    ← Isolates Boundary vs Boosting
       → XGBoost (ML Boosting + Risk Gates)      ← Isolates value of LLM Reasoning (NEW)
         → LLM Agent (LLM Decisions + Risk Gates)
 ```
@@ -72,6 +72,7 @@ To prevent lookahead bias (data leakage), the XGBoost model is trained strictly 
 | **2008-2009** | Jan 1, 2005 - Dec 31, 2007 | Jan 1, 2008 - Dec 31, 2009 |
 | **2020-2021** | Jan 1, 2017 - Dec 31, 2019 | Jan 1, 2020 - Dec 31, 2021 |
 | **2022-2023** | Jan 1, 2019 - Dec 31, 2021 | Jan 1, 2022 - Dec 31, 2023 |
+| **2024-2025** | Jan 1, 2021 - Dec 31, 2023 | Jan 1, 2024 - Dec 31, 2025 |
 
 ---
 

@@ -5,16 +5,16 @@
 | Asset            | AAPL             |
 | Crisis Period    | 2020-2021 (S2)   |
 | Initial Capital  | $1,000.00        |
-| Final Capital    | $2,135.42        |
-| Net Profit       | +$1,135.42       |
-| Return %         | +113.54%         |
-| Total Trades     | 73               |
-| Win Rate         | 57.5%            |
-| Profit Factor    | 8.46             |
-| Sharpe Ratio     | 1.76             |
-| Sortino Ratio    | 10.77            |
-| Maximum Drawdown | 2.07%            |
-| Recovery Factor  | 54.85            |
-| VaR/CVaR (95%)   | 0.05% / 0.42%    |
-| Avg Holding Time | 3.7d             |
+| Final Capital    | $1,515.01        |
+| Net Profit       | +$515.01         |
+| Return %         | +51.50%          |
+| Total Trades     | 69               |
+| Win Rate         | 50.7%            |
+| Profit Factor    | 6.30             |
+| Sharpe Ratio     | 1.15             |
+| Sortino Ratio    | 8.05             |
+| Maximum Drawdown | 2.09%            |
+| Recovery Factor  | 24.64            |
+| VaR/CVaR (95%)   | 0.04% / 0.29%    |
+| Avg Holding Time | 4.2d             |
 +------------------+------------------+

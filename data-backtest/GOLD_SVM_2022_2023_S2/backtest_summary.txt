@@ -1,0 +1,20 @@
++------------------+----------------+
+| Metric           | Value          |
++------------------+----------------+
+| Model            | SVM Baseline   |
+| Asset            | Gold           |
+| Crisis Period    | 2022-2023 (S2) |
+| Initial Capital  | $1,000.00      |
+| Final Capital    | $951.71        |
+| Net Profit       | -$48.29        |
+| Return %         | -4.83%         |
+| Total Trades     | 48             |
+| Win Rate         | 31.2%          |
+| Profit Factor    | 0.67           |
+| Sharpe Ratio     | -0.88          |
+| Sortino Ratio    | -0.94          |
+| Maximum Drawdown | 9.59%          |
+| Recovery Factor  | -0.50          |
+| VaR/CVaR (95%)   | -0.34% / 0.56% |
+| Avg Holding Time | 5.2d           |
++------------------+----------------+

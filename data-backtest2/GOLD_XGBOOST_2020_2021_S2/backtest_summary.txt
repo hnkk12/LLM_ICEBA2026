@@ -5,16 +5,16 @@
 | Asset            | Gold             |
 | Crisis Period    | 2020-2021 (S2)   |
 | Initial Capital  | $1,000.00        |
-| Final Capital    | $1,779.53        |
-| Net Profit       | +$779.53         |
-| Return %         | +77.95%          |
-| Total Trades     | 78               |
-| Win Rate         | 48.7%            |
-| Profit Factor    | 12.19            |
-| Sharpe Ratio     | 2.02             |
-| Sortino Ratio    | 17.42            |
-| Maximum Drawdown | 1.54%            |
-| Recovery Factor  | 50.56            |
-| VaR/CVaR (95%)   | 0.05% / 0.18%    |
-| Avg Holding Time | 3.0d             |
+| Final Capital    | $1,905.58        |
+| Net Profit       | +$905.58         |
+| Return %         | +90.56%          |
+| Total Trades     | 91               |
+| Win Rate         | 52.8%            |
+| Profit Factor    | 7.73             |
+| Sharpe Ratio     | 1.95             |
+| Sortino Ratio    | 13.94            |
+| Maximum Drawdown | 2.16%            |
+| Recovery Factor  | 41.98            |
+| VaR/CVaR (95%)   | 0.14% / 0.36%    |
+| Avg Holding Time | 3.4d             |
 +------------------+------------------+

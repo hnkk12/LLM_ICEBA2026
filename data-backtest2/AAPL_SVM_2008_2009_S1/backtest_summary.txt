@@ -1,0 +1,20 @@
++------------------+----------------+
+| Metric           | Value          |
++------------------+----------------+
+| Model            | SVM Baseline   |
+| Asset            | AAPL           |
+| Crisis Period    | 2008-2009 (S1) |
+| Initial Capital  | $1,000.00      |
+| Final Capital    | $3,431.00      |
+| Net Profit       | +$2,431.00     |
+| Return %         | +243.10%       |
+| Total Trades     | 30             |
+| Win Rate         | 46.7%          |
+| Profit Factor    | 12.98          |
+| Sharpe Ratio     | 1.35           |
+| Sortino Ratio    | 19.30          |
+| Maximum Drawdown | 2.49%          |
+| Recovery Factor  | 97.68          |
+| VaR/CVaR (95%)   | -0.04% / 0.37% |
+| Avg Holding Time | 12.0d          |
++------------------+----------------+

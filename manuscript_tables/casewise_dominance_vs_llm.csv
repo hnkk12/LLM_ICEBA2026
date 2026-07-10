@@ -1,7 +1,7 @@
 system_vs_llm,scenario,return_wins,lower_mdd_wins,sharpe_wins,n_cases
-RF,S0,5,5,5,6
+SVM,S0,5,5,5,6
+SVM,S1,2,5,3,6
+SVM,S2,4,4,4,6
 XGBoost,S0,3,3,5,6
-RF,S1,4,5,4,6
 XGBoost,S1,4,5,4,6
-RF,S2,5,4,5,6
 XGBoost,S2,4,3,4,6

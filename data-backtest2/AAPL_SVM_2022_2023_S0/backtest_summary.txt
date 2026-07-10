@@ -1,0 +1,20 @@
++------------------+----------------+
+| Metric           | Value          |
++------------------+----------------+
+| Model            | SVM Baseline   |
+| Asset            | AAPL           |
+| Crisis Period    | 2022-2023 (S0) |
+| Initial Capital  | $1,000.00      |
+| Final Capital    | $1,000.00      |
+| Net Profit       | +$0.00         |
+| Return %         | +0.00%         |
+| Total Trades     | 0              |
+| Win Rate         | 0.0%           |
+| Profit Factor    | 0.00           |
+| Sharpe Ratio     | 0.00           |
+| Sortino Ratio    | 0.00           |
+| Maximum Drawdown | 0.00%          |
+| Recovery Factor  | 0.00           |
+| VaR/CVaR (95%)   | 0.00% / 0.00%  |
+| Avg Holding Time | 0.0d           |
++------------------+----------------+

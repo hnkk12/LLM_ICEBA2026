@@ -1805,7 +1805,7 @@ def _call_google_gemini_api(prompt: str) -> Optional[Dict[str, Any]]:
             "contents": [
                 {
                     "role": "user",
-                    "parts": [{"text": f"SYSTEM RULEANONYMIZED_LOCAL_PATH}\n\nUSER PROMPANONYMIZED_LOCAL_PATH}"}]
+                    "parts": [{"text": f"SYSTEM RULES:\n{TRADING_RULES_PROMPT}\n\nUSER PROMPT:\n{prompt}"}]
                 }
             ],
             "generationConfig": {

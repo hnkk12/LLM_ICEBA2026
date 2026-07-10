@@ -7,7 +7,7 @@ Files:
 - `performance_summary_total_return_from_json.csv`: main aggregate performance table.
 - `trade_diagnostics_from_json.csv`: trade count and win-rate diagnostics.
 - `paired_bootstrap_return_delta_vs_llm.csv`: paired bootstrap diagnostics against the LLM.
-- `casewise_dominance_vs_llm.csv`: case-wise win counts for RF/XGBoost versus the LLM.
+- `casewise_dominance_vs_llm.csv`: case-wise win counts for SVM/XGBoost versus the LLM.
 - `reference_baselines_summary.csv`: cash and buy-and-hold references.
 - `agentic_minimality_gate_summary.csv`: deployment-governance ledger used in the paper.
 

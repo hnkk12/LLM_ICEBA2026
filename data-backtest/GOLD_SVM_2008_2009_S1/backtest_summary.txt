@@ -1,0 +1,20 @@
++------------------+----------------+
+| Metric           | Value          |
++------------------+----------------+
+| Model            | SVM Baseline   |
+| Asset            | Gold           |
+| Crisis Period    | 2008-2009 (S1) |
+| Initial Capital  | $1,000.00      |
+| Final Capital    | $1,000.22      |
+| Net Profit       | +$0.22         |
+| Return %         | +0.02%         |
+| Total Trades     | 2              |
+| Win Rate         | 50.0%          |
+| Profit Factor    | 1.25           |
+| Sharpe Ratio     | 0.11           |
+| Sortino Ratio    | 0.03           |
+| Maximum Drawdown | 0.11%          |
+| Recovery Factor  | 0.21           |
+| VaR/CVaR (95%)   | 0.00% / 0.00%  |
+| Avg Holding Time | 1.0d           |
++------------------+----------------+

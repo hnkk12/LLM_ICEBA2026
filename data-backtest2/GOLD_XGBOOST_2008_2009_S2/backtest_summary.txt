@@ -5,16 +5,16 @@
 | Asset            | Gold             |
 | Crisis Period    | 2008-2009 (S2)   |
 | Initial Capital  | $1,000.00        |
-| Final Capital    | $1,632.18        |
-| Net Profit       | +$632.18         |
-| Return %         | +63.22%          |
-| Total Trades     | 81               |
-| Win Rate         | 63.0%            |
-| Profit Factor    | 6.59             |
-| Sharpe Ratio     | 1.55             |
-| Sortino Ratio    | 7.88             |
-| Maximum Drawdown | 3.03%            |
-| Recovery Factor  | 20.84            |
+| Final Capital    | $2,178.09        |
+| Net Profit       | +$1,178.09       |
+| Return %         | +117.81%         |
+| Total Trades     | 83               |
+| Win Rate         | 50.6%            |
+| Profit Factor    | 9.10             |
+| Sharpe Ratio     | 0.99             |
+| Sortino Ratio    | 14.95            |
+| Maximum Drawdown | 2.67%            |
+| Recovery Factor  | 44.06            |
 | VaR/CVaR (95%)   | 0.07% / 0.36%    |
-| Avg Holding Time | 2.9d             |
+| Avg Holding Time | 3.2d             |
 +------------------+------------------+

@@ -1,0 +1,4 @@
+system,scenario,trades_per_run,win_rate,avg_hold_days
+SVM,S0,6.75,9.58,4.18
+SVM,S1,6.75,16.03,4.18
+SVM,S2,6.75,15.61,4.18
