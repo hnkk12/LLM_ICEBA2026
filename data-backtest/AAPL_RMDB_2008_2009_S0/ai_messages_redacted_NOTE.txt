@@ -1,0 +1,1 @@
+Raw provider request/response metadata logs are omitted from the anonymous package. Prompt templates, parsed decisions, trade histories, portfolio states, and JSON summaries are retained for audit.

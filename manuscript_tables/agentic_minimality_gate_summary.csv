@@ -1,0 +1,5 @@
+gate,evidence,decision
+Risk-return sufficiency,RF beats the LLM on return in 14/18 paired case-scenario comparisons and has lower average MDD in all scenarios.,Do not use LLM as primary signal without incremental evidence.
+Operational sufficiency,"RF/XGBoost require no token inference and avoid response parsing; the LLM requires prompt, schema, and provider validation.",Prefer tabular learner for primary daily signal.
+Interpretive sufficiency,"RF and XGBoost share the same top-three feature groups: EMA, returns, and MACD.",Structured state already carries the major signal.
+Escalation trigger,"Use LLM for explanation, exception review, and audit narratives, not as default execution engine.",Escalate only when agent-specific value is measured.

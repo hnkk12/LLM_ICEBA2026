@@ -1,0 +1,11 @@
+ANONYMITY AND QC REPORT - V12
+
+Scope: final PRICAI 2026 double-anonymous artifact package.
+Flagged residual sensitive strings: 0
+
+Checks performed:
+- No author names, institutional names, emails, or local machine paths retained in text files.
+- No ICDM labels retained.
+- Raw provider metadata logs are omitted.
+- Manuscript tables are regenerated from retained JSON outputs.
+- Figure/table typography was polished in the V12 manuscript source.

@@ -1,0 +1,3 @@
+reference,average_return_pct,average_max_drawdown_pct,interpretation
+Cash/no-trade,0.0,0.0,Capital-preservation floor
+Buy-and-hold,35.241046369602046,31.887888951990167,Directional exposure reference
