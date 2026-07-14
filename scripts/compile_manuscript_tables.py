@@ -33,6 +33,10 @@ def compile_tables():
             run_id = data["run_id"]
             # Parse system, asset, period, scenario from run_id: e.g., AAPL_SVM_2008_2009_S0 or GOLD_BACKTEST_2020_2021_S1
             parts = run_id.split("_")
+            # Normalize parts if 'ROBUST' is present to prevent index shift in robust LLM run_ids
+            if "ROBUST" in parts:
+                parts.remove("ROBUST")
+
             if len(parts) < 5:
                 continue
                 

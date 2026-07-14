@@ -13,7 +13,6 @@ import logging
 import csv
 from datetime import datetime, timezone
 from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple
-from decimal import Decimal
 from pathlib import Path
 
 import numpy as np
@@ -846,7 +845,7 @@ def save_state() -> None:
 
 def reset_state(initial_balance: Optional[float] = None) -> None:
     """Reset in-memory trading state to start a fresh run."""
-    global balance, positions, trade_history, iteration_counter, equity_history, invocation_count, current_iteration_messages, BOT_START_TIME
+    global balance, positions, trade_history, iteration_counter, invocation_count, current_iteration_messages, BOT_START_TIME
     balance = float(initial_balance) if initial_balance is not None else START_CAPITAL
     positions = {}
     trade_history = []
@@ -1414,7 +1413,7 @@ def format_trading_prompt() -> str:
         
         if is_daily_only:
             # Optimized 1D prompt: Skip redundant timeframe labels
-            prompt_lines.append(f"  ANALYSIS (1D):")
+            prompt_lines.append("  ANALYSIS (1D):")
             prompt_lines.append(f"    EMA Alignment: EMA20={fmt(trend['ema20'], 3)}, EMA50={fmt(trend['ema50'], 3)}, EMA200={fmt(trend['ema200'], 3)}")
             prompt_lines.append(f"    Indicators: RSI14={fmt(trend['rsi14'], 2)}, MACD={fmt(trend['macd'], 3)}, ATR14={fmt(trend['atr'], 3)}, ADX14={fmt(trend.get('adx'), 2)}")
             
@@ -1436,7 +1435,7 @@ def format_trading_prompt() -> str:
             prompt_lines.append(f"    History (last 10): {json.dumps(trend['series']['close'])}")
         else:
             # Original Multi-timeframe prompt
-            prompt_lines.append(f"\n  4H TREND TIMEFRAME:")
+            prompt_lines.append("\n  4H TREND TIMEFRAME:")
             prompt_lines.append(f"    EMA Alignment: EMA20={fmt(trend['ema20'], 3)}, EMA50={fmt(trend['ema50'], 3)}, EMA200={fmt(trend['ema200'], 3)}")
             ema_trend = (
                 "BULLISH"
@@ -1475,7 +1474,7 @@ def format_trading_prompt() -> str:
                 f"                         MACD={json.dumps(trend['series']['macd'])}, RSI14={json.dumps(trend['series']['rsi14'])}"
             )
 
-            prompt_lines.append(f"\n  1H STRUCTURE TIMEFRAME:")
+            prompt_lines.append("\n  1H STRUCTURE TIMEFRAME:")
             prompt_lines.append(
                 f"    EMA20: {fmt(structure['ema20'], 3)}, EMA50: {fmt(structure['ema50'], 3)}"
             )
@@ -1548,7 +1547,7 @@ def format_trading_prompt() -> str:
             )
 
 
-        prompt_lines.append(f"\n  MARKET SENTIMENT:")
+        prompt_lines.append("\n  MARKET SENTIMENT:")
         prompt_lines.append(
             f"    Open Interest: Latest={fmt(open_interest.get('latest'), 2)}, Average={fmt(open_interest.get('average'), 2)}"
         )
@@ -2797,8 +2796,8 @@ def execute_close(coin: str, decision: Dict[str, Any], current_price: float) -> 
             )
             return
 
-    # Return proportional margin and realized PnL
-    balance += margin_released + net_pnl
+    # Return proportional margin and realized PnL (excluding entry fee which was already deducted at entry)
+    balance += margin_released + (gross_pnl - exit_fee)
 
     label = "[PARTIAL CLOSE]" if is_partial else "[CLOSE]"
     color = Fore.GREEN if net_pnl >= 0 else Fore.RED
@@ -3214,7 +3213,7 @@ def check_stop_loss_take_profit() -> None:
     if hyperliquid_trader.is_live:
         return
     for coin in list(positions.keys()):
-        symbol = [s for s, c in SYMBOL_TO_COIN.items() if c == coin][0]
+        symbol = next((s for s, c in SYMBOL_TO_COIN.items() if c == coin), coin)
         data = fetch_market_data(symbol)
         if not data:
             continue

@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
-FEE_PATTERN = re.compile(r"FeeANONYMIZED_LOCAL_PATH")
+FEE_PATTERN = re.compile(r"Fees?:\s*\$?([0-9.]+)")
 
 
 def _parse_bool_env(value: Optional[str], default: bool = False) -> bool:
@@ -192,13 +192,18 @@ def process_trades(trade_rows: List[Dict[str, str]], starting_balance: float) ->
             if total_fees <= 0 and position.entry_fee > 0:
                 # Fallback: assume exit fee is zero, total fees equals entry fee
                 total_fees = position.entry_fee
+            
+            # Since total_fees logged at CLOSE contains entry_fee + exit_fee,
+            # we subtract position.entry_fee to extract only the exit fee, preventing double deduction.
+            exit_fee = max(total_fees - position.entry_fee, 0.0)
+
             if position.side == "long":
                 gross = (exit_price - position.entry_price) * position.quantity
             else:
                 gross = (position.entry_price - exit_price) * position.quantity
-            net = gross - total_fees
+            
             balance += position.margin
-            balance += net
+            balance += (gross - exit_fee)
         else:
             warnings.append(f"Unknown action '{action}' for {coin} at {row.get('timestamp')}")
 

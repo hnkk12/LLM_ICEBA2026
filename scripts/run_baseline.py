@@ -16,7 +16,7 @@ import json
 import logging
 from pathlib import Path
 from typing import Optional, List, Dict, Any
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 from dotenv import load_dotenv

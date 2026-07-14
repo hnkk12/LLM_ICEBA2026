@@ -47,11 +47,15 @@ def run_ml_baselines():
         "xgboost2.py"
     ]
     
+    env = os.environ.copy()
+    env["BACKTEST_PERIOD"] = "2024-2025"
+    
     for script in ml_scripts:
         print(f"\n>>> Running machine learning script: {script}...")
         script_path = PROJECT_ROOT / script
         subprocess.run(
             [sys.executable, str(script_path)],
+            env=env,
             cwd=str(PROJECT_ROOT),
             check=True
         )

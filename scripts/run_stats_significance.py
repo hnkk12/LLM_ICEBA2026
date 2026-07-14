@@ -10,12 +10,10 @@ Performs:
 - Generates a research report saved to data-backtest/statistical_significance_report.md
 """
 
-import os
 import sys
 import json
 import math
 import argparse
-import logging
 from pathlib import Path
 from typing import Optional
 from datetime import datetime, timezone
@@ -74,11 +72,6 @@ def run_t_test(x: np.ndarray, y: np.ndarray):
         if denom == 0:
             return 0.0, 1.0
         t_stat = (m1 - m2) / denom
-        
-        # Degrees of freedom (Welch–Satterthwaite)
-        df_num = (v1/n1 + v2/n2)**2
-        df_den = (v1/n1)**2 / (n1 - 1) + (v2/n2)**2 / (n2 - 1)
-        df = df_num / df_den
         
         # P-value approximation using normal distribution as proxy for large samples
         p_val = 2.0 * (1.0 - norm_cdf(abs(t_stat)))
@@ -153,7 +146,7 @@ def find_latest_results(prefix: str) -> Optional[Path]:
         return None
     
     run_dirs = sorted(
-        [d for d in data_backtest_dir.iterdir() if d.is_dir() and d.name.startswith("run-")],
+        [d for d in data_backtest_dir.iterdir() if d.is_dir() and d.name != "cache"],
         key=lambda d: d.stat().st_mtime,
         reverse=True
     )

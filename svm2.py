@@ -5,7 +5,6 @@ Using local robust daily datasets (dataset_robust) and identical fee/slippage mo
 """
 
 import os
-import sys
 import json
 import logging
 import warnings
@@ -197,7 +196,6 @@ def run_backtest(
     
     dates = df_test["Date"].tolist()
     closes = df_test["Close"].tolist()
-    highs = df_test["High"].tolist()
     lows = df_test["Low"].tolist()
     atrs = df_test["atr_14"].tolist()
     vol_flags = df_test["vol_gate_flag"].tolist()
@@ -208,7 +206,6 @@ def run_backtest(
     for i in range(len(df_test)):
         date = dates[i]
         price = closes[i]
-        high = highs[i]
         low = lows[i]
         atr = atrs[i]
         vol_gate = vol_flags[i] == 1
@@ -409,7 +406,10 @@ def run_all():
         raw_df = pd.read_csv(data_path)
         df_full = compute_features(raw_df)
 
+        filter_period = os.getenv("BACKTEST_PERIOD")
         for period_name, window in STRESS_WINDOWS.items():
+            if filter_period and period_name != filter_period:
+                continue
             logging.info(f"Running period: {period_name}")
 
             # Walk-forward splits

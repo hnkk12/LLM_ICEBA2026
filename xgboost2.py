@@ -5,7 +5,6 @@ Using local robust daily datasets (dataset_robust) and identical fee/slippage mo
 """
 
 import os
-import sys
 import json
 import logging
 import warnings
@@ -195,7 +194,6 @@ def run_backtest(
     
     dates = df_test["Date"].tolist()
     closes = df_test["Close"].tolist()
-    highs = df_test["High"].tolist()
     lows = df_test["Low"].tolist()
     atrs = df_test["atr_14"].tolist()
     vol_flags = df_test["vol_gate_flag"].tolist()
@@ -206,7 +204,6 @@ def run_backtest(
     for i in range(len(df_test)):
         date = dates[i]
         price = closes[i]
-        high = highs[i]
         low = lows[i]
         atr = atrs[i]
         vol_gate = vol_flags[i] == 1
@@ -409,7 +406,10 @@ def run_all():
         raw_df = pd.read_csv(data_path)
         df_full = compute_features(raw_df)
 
+        filter_period = os.getenv("BACKTEST_PERIOD")
         for period_name, window in STRESS_WINDOWS.items():
+            if filter_period and period_name != filter_period:
+                continue
             logging.info(f"Running period: {period_name}")
 
             # Walk-forward splits
@@ -750,82 +750,86 @@ def generate_mdd_advantage_counts(xgb_agg_df: pd.DataFrame):
     Scans data-backtest for existing Baseline, RMDB, and LLM runs, 
     then computes returns and MDD wins comparison tables.
     """
-    logging.info("Scanning completed backtests in data-backtest/ for table comparisons...")
+    logging.info("Scanning completed backtests in data-backtest/ and data-backtest2/ for table comparisons...")
     
     parsed_runs = []
     
-    # Scan all directories in data-backtest
-    for d in DATA_BACKTEST_DIR.iterdir():
-        if not d.is_dir() or d.name == "cache":
+    # Scan both data-backtest and data-backtest2 directories for completed runs
+    dirs_to_scan = [PROJECT_ROOT / "data-backtest", PROJECT_ROOT / "data-backtest2"]
+    for data_dir in dirs_to_scan:
+        if not data_dir.exists():
             continue
-        res_file = d / "backtest_results.json"
-        if not res_file.exists():
-            continue
-            
-        try:
-            with open(res_file, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                
-            model_name = data.get("llm", {}).get("model", "")
-            
-            # Map model string to paper system name
-            if "xgboost" in model_name.lower():
-                # We already have XGBoost from current run
+        for d in data_dir.iterdir():
+            if not d.is_dir() or d.name == "cache":
                 continue
-            elif "svm" in model_name.lower():
-                system = "SVM"
-            elif "risk-managed" in model_name.lower():
-                system = "RMDB"
-            elif "baseline" in model_name.lower():
-                system = "Baseline"
-            elif "llama" in model_name.lower() or "llm" in model_name.lower():
-                system = "LLM"
-            else:
+            res_file = d / "backtest_results.json"
+            if not res_file.exists():
                 continue
-                
-            # Parse scenario and period from run_id or timeframe dates
-            run_id = data.get("run_id", "")
             
-            # Extract scenario
-            scen = "S0"
-            for s_opt in ["S0", "S1", "S2"]:
-                if s_opt in run_id:
-                    scen = s_opt
-                    break
+            try:
+                with open(res_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
                     
-            # Extract period based on start year
-            start_year = pd.to_datetime(data["timeframe"]["start"]).year
-            if start_year == 2008:
-                period = "2008-2009"
-            elif start_year == 2020:
-                period = "2020-2021"
-            elif start_year == 2022:
-                period = "2022-2023"
-            else:
-                continue
+                model_name = data.get("llm", {}).get("model", "")
                 
-            asset_raw = data["symbols"][0].upper()
-            asset = "AAPL" if "AAPL" in asset_raw else "Gold"
-            
-            returns = np.array(data["daily_returns"])
-            mean_ret = np.mean(returns) * 100
-            mdd = data["capital"]["max_drawdown_pct"]
-            sharpe = data["capital"].get("sharpe_ratio", 0.0)
-            sortino = data["capital"].get("sortino_ratio", 0.0)
-            
-            parsed_runs.append({
-                "system": system,
-                "asset": asset,
-                "period": period,
-                "scenario": scen,
-                "mean_return": mean_ret,
-                "mdd": mdd,
-                "sharpe": sharpe,
-                "sortino": sortino
-            })
-        except Exception as e:
-            logging.warning(f"Could not parse results from {res_file}: {e}")
-            continue
+                # Map model string to paper system name
+                if "xgboost" in model_name.lower():
+                    # We already have XGBoost from current run
+                    continue
+                elif "svm" in model_name.lower():
+                    system = "SVM"
+                elif "risk-managed" in model_name.lower():
+                    system = "RMDB"
+                elif "baseline" in model_name.lower():
+                    system = "Baseline"
+                elif "llama" in model_name.lower() or "llm" in model_name.lower():
+                    system = "LLM"
+                else:
+                    continue
+                    
+                # Parse scenario and period from run_id or timeframe dates
+                run_id = data.get("run_id", "")
+                
+                # Extract scenario
+                scen = "S0"
+                for s_opt in ["S0", "S1", "S2"]:
+                    if s_opt in run_id:
+                        scen = s_opt
+                        break
+                        
+                # Extract period based on start year
+                start_year = pd.to_datetime(data["timeframe"]["start"]).year
+                if start_year == 2008:
+                    period = "2008-2009"
+                elif start_year == 2020:
+                    period = "2020-2021"
+                elif start_year == 2022:
+                    period = "2022-2023"
+                else:
+                    continue
+                    
+                asset_raw = data["symbols"][0].upper()
+                asset = "AAPL" if "AAPL" in asset_raw else "Gold"
+                
+                returns = np.array(data["daily_returns"])
+                mean_ret = np.mean(returns) * 100
+                mdd = data["capital"]["max_drawdown_pct"]
+                sharpe = data["capital"].get("sharpe_ratio", 0.0)
+                sortino = data["capital"].get("sortino_ratio", 0.0)
+                
+                parsed_runs.append({
+                    "system": system,
+                    "asset": asset,
+                    "period": period,
+                    "scenario": scen,
+                    "mean_return": mean_ret,
+                    "mdd": mdd,
+                    "sharpe": sharpe,
+                    "sortino": sortino
+                })
+            except Exception as e:
+                logging.warning(f"Could not parse results from {res_file}: {e}")
+                continue
 
     if not parsed_runs:
         logging.warning("No other system runs (Baseline, RMDB, LLM) were found in data-backtest/. MDD advantage counts will be blank.")

@@ -15,7 +15,7 @@ import os
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, List, Optional
 
 import numpy as np
 import pandas as pd
@@ -592,9 +592,6 @@ def main() -> None:
                 curr_close = float(klines[-1][4])
                 change = abs((curr_close - prev_close) / prev_close)
                 if change >= 0.008:
-                    should_call_ai = True
-                    event_reason = f"Volatility detected in {symbol} ({change*100:.1f}%)"
-                    break
                     should_call_ai = True
                     event_reason = f"Volatility detected in {symbol} ({change*100:.1f}%)"
                     break
