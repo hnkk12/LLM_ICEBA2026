@@ -496,8 +496,8 @@ def main() -> None:
                 rsi14 = float(latest_row["rsi14"]) if "rsi14" in latest_row and not pd.isna(latest_row["rsi14"]) else 50.0
                 macd = float(latest_row["macd"]) if "macd" in latest_row and not pd.isna(latest_row["macd"]) else 0.0
                 macd_signal = float(latest_row["macd_signal"]) if "macd_signal" in latest_row and not pd.isna(latest_row["macd_signal"]) else 0.0
-                yellow_long_confluence = (rsi14 > 50) or (macd > macd_signal)
-                yellow_short_confluence = (rsi14 < 50) or (macd < macd_signal)
+                yellow_long_confluence = (rsi14 < 50) or (macd > macd_signal)
+                yellow_short_confluence = (rsi14 > 50) or (macd < macd_signal)
             
             # ATR Gate (Anti-Chasing: no entry if price moved > 2 ATRs from trigger breakout level)
             is_long_chasing = False

@@ -1559,36 +1559,37 @@ def format_trading_prompt() -> str:
         prompt_lines.append(
             f"    Funding Rate: Latest={fmt_rate(data['funding_rate'])}, Average={funding_avg_str}"
         )
-        # Build trade history section (Feedback Loop)
-        if TRADES_CSV.exists():
-            try:
-                trades_df = pd.read_csv(TRADES_CSV)
-                if not trades_df.empty:
-                    # Get last 10 close/partial close events
-                    recent_outcomes = trades_df[trades_df["action"].isin(["CLOSE", "CLOSE_PARTIAL"])].tail(10)
-                    if not recent_outcomes.empty:
-                        prompt_lines.append("-" * 80)
-                        prompt_lines.append("RECENT TRADE OUTCOMES (Feedback Loop - Learn from these!)")
-                        for _, row in recent_outcomes.iterrows():
-                            pnl_val = float(row.get("pnl", 0.0))
-                            outcome = "[WIN]" if pnl_val > 0 else "[LOSS]" if pnl_val < 0 else "[BREAKEVEN]"
-                            coin_val = row.get("coin", "N/A")
-                            side_val = row.get("side", "N/A")
-                            reason_val = row.get("reason", "N/A")
-                            prompt_lines.append(f"{outcome} {coin_val} {side_val} | PnL: ${pnl_val:.2f} | Reason: {reason_val}")
 
-                        # Calculate recent win rate
-                        wins = (recent_outcomes["pnl"] > 0).sum()
-                        total_recent = len(recent_outcomes)
-                        recent_wr = (wins / total_recent) * 100
-                        prompt_lines.append(f"Recent Win Rate (last {total_recent}): {recent_wr:.1f}%")
-                        if recent_wr < 40:
-                            prompt_lines.append("NOTICE: You are currently in a losing streak. The market may be volatile or your current strategy is being exploited. Consider being more selective (REJECT more) or widening stops.")
-            except Exception as exc:
-                logging.debug("Failed to read trade history for prompt: %s", exc)
+    # Build trade history section (Feedback Loop)
+    if TRADES_CSV.exists():
+        try:
+            trades_df = pd.read_csv(TRADES_CSV)
+            if not trades_df.empty:
+                # Get last 10 close/partial close events
+                recent_outcomes = trades_df[trades_df["action"].isin(["CLOSE", "CLOSE_PARTIAL"])].tail(10)
+                if not recent_outcomes.empty:
+                    prompt_lines.append("-" * 80)
+                    prompt_lines.append("RECENT TRADE OUTCOMES (Feedback Loop - Learn from these!)")
+                    for _, row in recent_outcomes.iterrows():
+                        pnl_val = float(row.get("pnl", 0.0))
+                        outcome = "[WIN]" if pnl_val > 0 else "[LOSS]" if pnl_val < 0 else "[BREAKEVEN]"
+                        coin_val = row.get("coin", "N/A")
+                        side_val = row.get("side", "N/A")
+                        reason_val = row.get("reason", "N/A")
+                        prompt_lines.append(f"{outcome} {coin_val} {side_val} | PnL: ${pnl_val:.2f} | Reason: {reason_val}")
 
-        prompt_lines.append("-" * 80)
-        prompt_lines.append("ACCOUNT INFORMATION AND PERFORMANCE")
+                    # Calculate recent win rate
+                    wins = (recent_outcomes["pnl"] > 0).sum()
+                    total_recent = len(recent_outcomes)
+                    recent_wr = (wins / total_recent) * 100
+                    prompt_lines.append(f"Recent Win Rate (last {total_recent}): {recent_wr:.1f}%")
+                    if recent_wr < 40:
+                        prompt_lines.append("NOTICE: You are currently in a losing streak. The market may be volatile or your current strategy is being exploited. Consider being more selective (REJECT more) or widening stops.")
+        except Exception as exc:
+            logging.debug("Failed to read trade history for prompt: %s", exc)
+
+    prompt_lines.append("-" * 80)
+    prompt_lines.append("ACCOUNT INFORMATION AND PERFORMANCE")
 
     prompt_lines.append(f"- Total Return (%): {fmt(total_return, 2)}")
     prompt_lines.append(f"- Available Cash: {fmt(balance, 2)}")
@@ -2066,7 +2067,12 @@ def calculate_sortino_ratio(
         return None
 
     period_seconds = float(period_seconds) if period_seconds and period_seconds > 0 else CHECK_INTERVAL
-    periods_per_year = (365 * 24 * 60 * 60) / period_seconds
+    if period_seconds == 86400:
+        is_crypto = any(any(c in sym.upper() for c in ["USDT", "BTC", "ETH", "SOL", "XRP", "DOGE", "BNB"]) for sym in SYMBOLS)
+        days_in_year = 365 if is_crypto else 252
+    else:
+        days_in_year = 365
+    periods_per_year = (days_in_year * 24 * 60 * 60) / period_seconds
     if not np.isfinite(periods_per_year) or periods_per_year <= 0:
         return None
 
@@ -2104,7 +2110,12 @@ def calculate_sharpe_ratio(
         return None
 
     period_seconds = float(period_seconds) if period_seconds and period_seconds > 0 else CHECK_INTERVAL
-    periods_per_year = (365 * 24 * 60 * 60) / period_seconds
+    if period_seconds == 86400:
+        is_crypto = any(any(c in sym.upper() for c in ["USDT", "BTC", "ETH", "SOL", "XRP", "DOGE", "BNB"]) for sym in SYMBOLS)
+        days_in_year = 365 if is_crypto else 252
+    else:
+        days_in_year = 365
+    periods_per_year = (days_in_year * 24 * 60 * 60) / period_seconds
     if not np.isfinite(periods_per_year) or periods_per_year <= 0:
         return None
 
