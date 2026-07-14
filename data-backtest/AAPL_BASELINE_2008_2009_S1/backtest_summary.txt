@@ -5,16 +5,16 @@
 | Asset            | AAPL                     |
 | Crisis Period    | 2008-01-01 to 2009-12-31 |
 | Initial Capital  | $1,000.00                |
-| Final Capital    | $1,098.21                |
-| Net Profit       | +$98.21                  |
-| Return %         | +9.82%                   |
-| Total Trades     | 36                       |
+| Final Capital    | $1,041.85                |
+| Net Profit       | +$41.85                  |
+| Return %         | +4.19%                   |
+| Total Trades     | 108                      |
 | Win Rate         | 47.2%                    |
-| Profit Factor    | 1.51                     |
-| Sharpe Ratio     | 1.06                     |
-| Sortino Ratio    | 1.56                     |
-| Maximum Drawdown | 5.57%                    |
-| Recovery Factor  | 1.76                     |
-| VaR/CVaR (95%)   | 0.43% / 0.77%            |
-| Avg Holding Time | 8.3d                     |
+| Profit Factor    | 1.30                     |
+| Sharpe Ratio     | 0.51                     |
+| Sortino Ratio    | 0.73                     |
+| Maximum Drawdown | 6.90%                    |
+| Recovery Factor  | 0.61                     |
+| VaR/CVaR (95%)   | 0.42% / 0.76%            |
+| Avg Holding Time | 7.8d                     |
 +------------------+--------------------------+

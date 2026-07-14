@@ -104,11 +104,16 @@ def _parse_thinking_env(value: Optional[str]) -> Optional[Any]:
 # ───────────────────────── CONFIG ─────────────────────────
 API_KEY = os.getenv("BN_API_KEY", "")
 API_SECRET = os.getenv("BN_SECRET", "")
-HOSTED_LLM_API_KEY = os.getenv("HOSTED_LLM_API_KEY", "")
+HOSTED_LLM_API_KEY = os.getenv("HOSTED_LLM_API_KEY") or os.getenv("OPENROUTER_API_KEY") or ""
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 TELEGRAM_SIGNALS_CHAT_ID = os.getenv("TELEGRAM_SIGNALS_CHAT_ID", "")
+
+if os.getenv("BACKTEST_DISABLE_TELEGRAM", "false").strip().lower() in {"1", "true", "yes", "on"}:
+    TELEGRAM_BOT_TOKEN = ""
+    TELEGRAM_CHAT_ID = ""
+    TELEGRAM_SIGNALS_CHAT_ID = ""
 
 # Proxy configuration
 HTTP_PROXY = os.getenv("HTTP_PROXY")
@@ -1869,8 +1874,15 @@ def _call_hosted_llm_api(prompt: str) -> Optional[Dict[str, Any]]:
             metadata=request_payload,
         )
 
+        api_url = os.getenv("HOSTED_LLM_API_URL")
+        if not api_url or api_url == "https://REVIEWER_CONFIGURED_LLM_ENDPOINT":
+            if HOSTED_LLM_API_KEY.startswith("sk-or-"):
+                api_url = "https://openrouter.ai/api/v1/chat/completions"
+            else:
+                api_url = "https://REVIEWER_CONFIGURED_LLM_ENDPOINT"
+
         response = requests.post(
-            url=os.getenv("HOSTED_LLM_API_URL", "https://REVIEWER_CONFIGURED_LLM_ENDPOINT"),
+            url=api_url,
             headers={
                 "Authorization": f"Bearer {HOSTED_LLM_API_KEY}",
                 "Content-Type": "application/json",
