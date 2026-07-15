@@ -1,6 +1,6 @@
-# Results Directory - PRICAI 2026
+# Results Directory - ICEBA 2026
 
-This directory contains the aggregated CSV performance tables, metrics, explainability reports, and daily return files generated for the PRICAI 2026
+This directory contains the aggregated CSV performance tables, metrics, explainability reports, and daily return files generated for the ICEBA 2026 paper.
 
 1.  **Baseline**: Deterministic rule-based SMC/Wyckoff bot.
 2.  **RMDB**: Risk-Managed Deterministic Baseline (rules + risk gates).

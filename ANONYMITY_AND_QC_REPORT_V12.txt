@@ -1,6 +1,6 @@
 ANONYMITY AND QC REPORT - V12
 
-Scope: final PRICAI 2026 double-anonymous artifact package.
+Scope: final ICEBA 2026 double-anonymous artifact package.
 Flagged residual sensitive strings: 0
 
 Checks performed:

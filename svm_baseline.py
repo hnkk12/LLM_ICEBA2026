@@ -1,5 +1,5 @@
 """
-Support Vector Machine (SVM) Baseline for PRICAI 2026
+Support Vector Machine (SVM) Baseline for ICEBA 2026
 Runs 18 full backtests: 2 assets (AAPL, Gold) x 3 periods x 3 scenarios
 Using local daily datasets (2004-2023) and identical fee/slippage models as other systems.
 """

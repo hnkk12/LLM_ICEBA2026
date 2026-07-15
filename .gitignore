@@ -36,6 +36,5 @@ data-backtest/cache/
 # Temporarily ignored for current focus
 dashboard.py
 test_log.py
-hyperliquid_client.py
 Dockerfile
 replay/

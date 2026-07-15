@@ -1,4 +1,4 @@
-# Manuscript verification tables for PRICAI 2026 V5
+# Manuscript verification tables for ICEBA 2026 V5
 
 All performance and diagnostic tables are generated from retained artifact files. The main manuscript uses `total_return_pct` from `data-backtest/*/backtest_results.json`; it does not use hand-entered return values.
 
