@@ -22,8 +22,13 @@ The project evaluates and compares different financial trading systems across hi
 - `results/` & `results2/`: Explainable AI (XAI) diagnostics, including SHAP beeswarm plots, feature gain importance charts, and aggregated ML performance csvs.
 - `prompts/`: Core system prompt instructions defining the LLM trading rules and risk gates.
 - `scripts/`: Python orchestration scripts (stats verification, diagnostics, backtest runners).
+- `Figures/`: Contains the 25 generated academic and statistical charts used in the scientific manuscript.
+- `paper/`: Contains the Word document templates and compiled paper outputs (both blinded and unblinded).
+- `generate_figures.py`: Generates the 25 academic figures from backtest and results databases.
+- `write_academic_paper.py`: Compiles the final scientific manuscript docm files using python-docx and local statistics databases.
 - `ANONYMITY_AND_QC_REPORT_V12.txt`: Anonymity audit log confirming double-blind compliance (removal of author names, emails, local paths).
 - `ARTIFACT_MANIFEST_V12.csv`: Checksum verification manifest generated automatically to ensure dataset and code integrity.
+
 
 ---
 
@@ -97,11 +102,22 @@ To run the statistical significance boot-strap delta testing (validating return 
 python scripts/run_stats_significance.py
 ```
 
-### 5. Generate Checksum Manifest
+### 5. Generate Academic Figures & Compile Paper
+To regenerate the 25 academic statistical charts from the compiled manuscript metrics:
+```bash
+python generate_figures.py
+```
+To compile the final Microsoft Word manuscript files (both `paper.docm` and `paper_blind.docm`) using python-docx:
+```bash
+python write_academic_paper.py
+```
+
+### 6. Generate Checksum Manifest
 To regenerate the SHA-256 manifest to log any changes:
 ```bash
 python scripts/generate_manifest.py
 ```
+
 
 ---
 

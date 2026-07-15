@@ -806,6 +806,8 @@ def generate_mdd_advantage_counts(xgb_agg_df: pd.DataFrame):
                 period = "2020-2021"
             elif start_year == 2022:
                 period = "2022-2023"
+            elif start_year == 2024:
+                period = "2024-2025"
             else:
                 continue
                 

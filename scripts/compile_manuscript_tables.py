@@ -177,7 +177,9 @@ def compile_tables():
     print("\n--- SVM Dominance Summary vs LLM ---")
     for row in dominance_rows:
         if row["system_vs_llm"] == "SVM":
-            print(f"SVM vs LLM ({row['scenario']}): Return wins={row['return_wins']}/6, Lower MDD wins={row['lower_mdd_wins']}/6, Sharpe wins={row['sharpe_wins']}/6")
+            print(f"SVM vs LLM ({row['scenario']}): Return wins={row['return_wins']}/{row['n_cases']}, Lower MDD wins={row['lower_mdd_wins']}/{row['n_cases']}, Sharpe wins={row['sharpe_wins']}/{row['n_cases']}")
+
+
 
 if __name__ == "__main__":
     compile_tables()

@@ -45,7 +45,8 @@ df_details['system'] = df_details['system'].replace({'xgboost': 'XGBoost', 'svm'
 # Create output folder
 paper_dir = "paper"
 os.makedirs(paper_dir, exist_ok=True)
-template_path = "Springer_Template.docm"
+template_path = os.path.join(paper_dir, "Springer_Template.docm")
+
 
 # Format a table to follow Springer publication rules (Top border, Bottom border, Header bottom border, NO vertical borders)
 def style_table_as_springer(table):

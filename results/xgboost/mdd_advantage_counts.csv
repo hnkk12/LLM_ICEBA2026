@@ -1,13 +1,13 @@
 scenario,ref,mdd_wins,ret_wins,mdd_adv
-S0,vs Baseline,4,4,0.5147
-S1,vs Baseline,4,4,3.4534
-S2,vs Baseline,4,4,2.8755
-S0,vs RMDB,4,4,0.4638
-S1,vs RMDB,4,4,3.4025
-S2,vs RMDB,4,4,2.8247
-S0,vs LLM,3,2,1.8668
-S1,vs LLM,5,4,4.1579
-S2,vs LLM,3,3,1.2931
-S0,vs SVM,1,2,-3.4379
-S1,vs SVM,2,3,-1.2742
-S2,vs SVM,2,3,-1.7172
+S0,vs Baseline,6,6,1.7206
+S1,vs Baseline,6,6,4.1699
+S2,vs Baseline,6,6,3.6981
+S0,vs RMDB,6,6,1.9692
+S1,vs RMDB,6,6,4.4184
+S2,vs RMDB,6,6,3.9466
+S0,vs LLM,4,2,1.6317
+S1,vs LLM,7,5,4.1285
+S2,vs LLM,5,5,2.1158
+S0,vs SVM,1,2,-3.7559
+S1,vs SVM,2,4,-1.7829
+S2,vs SVM,2,4,-2.27

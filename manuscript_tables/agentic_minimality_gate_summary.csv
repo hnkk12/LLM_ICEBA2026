@@ -1,5 +1,5 @@
 gate,evidence,decision
-Risk-return sufficiency,SVM beats the LLM on return in 11/18 paired case-scenario comparisons and has lower average MDD in all scenarios.,Do not use LLM as primary signal without incremental evidence.
+Risk-return sufficiency,SVM beats the LLM on return in 16/24 paired case-scenario comparisons and has lower average MDD in all scenarios.,Do not use LLM as primary signal without incremental evidence.
 Operational sufficiency,"SVM/XGBoost require no token inference and avoid response parsing; the LLM requires prompt, schema, and provider validation.",Prefer tabular learner for primary daily signal.
 Interpretive sufficiency,"SVM and XGBoost share key technical indicators including EMA, MACD, and returns as significant features.",Structured state already carries the major signal.
 Escalation trigger,"Use LLM for explanation, exception review, and audit narratives, not as default execution engine.",Escalate only when agent-specific value is measured.

@@ -15,7 +15,7 @@ This directory contains the aggregated CSV performance tables, metrics, explaina
 ```
 results/
 ├── README.md                          # This documentation file
-├── table2_combined.csv                # Consolidated Table II (Baseline vs RMDB vs RF vs XGBoost vs LLM)
+├── table2_combined.csv                # Consolidated Table II (Baseline vs RMDB vs SVM vs XGBoost vs LLM)
 ├── svm/                               # Support Vector Machine outputs
 │   ├── aggregate_performance.csv      # Individual SVM run metrics (18 rows)
 │   ├── trade_diagnostics.csv          # Table V: Average trades, win rates, and hold times for SVM

@@ -159,6 +159,8 @@ def find_latest_results(prefix: str) -> Optional[Path]:
                     data = json.load(f)
                     model_name = data.get("llm", {}).get("model", "")
                     if prefix.lower() in model_name.lower():
+                        if prefix.lower() == "baseline" and "rule-based" not in model_name.lower():
+                            continue
                         return res_file
             except:
                 continue
