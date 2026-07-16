@@ -1,19 +1,9 @@
 import os
 import sys
-import subprocess
+import matplotlib
 
-# Ensure required libraries are installed
-required_libs = ["pandas", "numpy", "matplotlib", "seaborn", "pillow"]
-for lib in required_libs:
-    try:
-        __import__(lib)
-    except ImportError:
-        print(f"Installing missing dependency: {lib}...")
-        try:
-            subprocess.check_call([sys.executable, "-m", "pip", "install", lib])
-        except Exception as e:
-            print(f"Failed to install {lib}: {e}. Trying to proceed anyway...")
-
+# Publication figures must be renderable in headless reviewer/CI environments.
+matplotlib.use("Agg")
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

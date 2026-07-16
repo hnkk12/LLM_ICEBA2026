@@ -329,7 +329,14 @@ def main() -> None:
     cfg = BacktestConfig.from_environment()
     configure_environment(cfg)
 
+    # Save all BACKTEST_ and TRADEBOT_ env vars before importing bot.py
+    saved_envs = {k: v for k, v in os.environ.items() if k.startswith("BACKTEST_") or k.startswith("TRADEBOT_")}
+
     import bot
+
+    # Restore them to prevent bot.py import from overriding them via load_dotenv(override=True)
+    for k, v in saved_envs.items():
+        os.environ[k] = v
     bot.LLM_MODEL_NAME = "Risk-Managed Deterministic Baseline"
     bot.LLM_TEMPERATURE = 0.0
 

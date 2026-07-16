@@ -25,8 +25,8 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(PROJECT_ROOT))
 
-import backtest
-from backtest import BacktestConfig, HistoricalBinanceClient, KLINE_COLUMNS, load_from_dataset, interval_to_timedelta
+import backtest2 as backtest
+from backtest2 import BacktestConfig, HistoricalBinanceClient, KLINE_COLUMNS, load_from_dataset, interval_to_timedelta
 
 def detect_candlestick_patterns(df: pd.DataFrame, num_candles: int = 2) -> List[Dict[str, Any]]:
     """Detect Pinbar, Engulfing, and Inside Bar patterns for the last num_candles."""

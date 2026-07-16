@@ -487,7 +487,14 @@ def main() -> None:
     print(f"Backtest LLM override from env: {cfg.model}")
     configure_environment(cfg)
 
+    # Save all BACKTEST_ and TRADEBOT_ env vars before importing bot.py
+    saved_envs = {k: v for k, v in os.environ.items() if k.startswith("BACKTEST_") or k.startswith("TRADEBOT_")}
+
     import bot  # pylint: disable=import-error
+
+    # Restore them to prevent bot.py import from overriding them via load_dotenv(override=True)
+    for k, v in saved_envs.items():
+        os.environ[k] = v
     
     # Override symbols if provided in environment
     env_symbols = os.getenv("BACKTEST_SYMBOLS")
