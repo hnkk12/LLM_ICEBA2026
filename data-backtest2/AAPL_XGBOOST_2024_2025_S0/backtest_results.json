@@ -4,29 +4,29 @@
   "cache_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest2\\cache",
   "timeframe": {
     "start": "2024-01-02T00:00:00",
-    "end": "2025-12-31T00:00:00",
+    "end": "2025-12-30T00:00:00",
     "interval": "1d",
-    "bars": 502
+    "bars": 501
   },
   "symbols": [
     "AAPL"
   ],
   "capital": {
     "start": 1000.0,
-    "final_balance": 2422.2826292294912,
-    "final_equity": 2422.2826292294912,
-    "total_net_profit": 1422.2826292294912,
-    "total_return_pct": 142.2283,
+    "final_balance": 2422.20301657253,
+    "final_equity": 2422.20301657253,
+    "total_net_profit": 1422.20301657253,
+    "total_return_pct": 142.2203,
     "max_drawdown_pct": 6.1135,
-    "recovery_factor": 23.2646,
-    "profit_factor": 7.1458,
+    "recovery_factor": 23.2633,
+    "profit_factor": 7.1433,
     "win_rate_pct": 18.6,
-    "sharpe_ratio": 1.3939,
-    "sortino_ratio": 17.8423,
-    "var_95_pct": 0.07184399879521884,
+    "sharpe_ratio": 1.3953,
+    "sortino_ratio": 17.8775,
+    "var_95_pct": 0.07185513414854415,
     "cvar_95_pct": 0.378078941504857,
     "gross_profit": 1653.707,
-    "gross_loss": 231.4243
+    "gross_loss": 231.504
   },
   "daily_returns": [
     -0.0005082218995976291,
@@ -529,8 +529,7 @@
     0.0,
     -0.0005010559733487318,
     8.482182745219649e-06,
-    8.962837909145864e-06,
-    -0.0003995017789818464
+    -0.00042339647688086155
   ],
   "equity_history": [
     999.4917781004024,
@@ -1033,8 +1032,7 @@
     2424.423220834988,
     2423.2084490982634,
     2423.2290031951584,
-    2423.2507222039308,
-    2422.2826292294912
+    2422.20301657253
   ],
   "llm": {
     "model": "XGBoost Baseline",
@@ -1057,11 +1055,11 @@
     "winning_trades": 16,
     "losing_trades": 70,
     "win_rate_pct": 18.6,
-    "net_realized_pnl": 1422.2826292294912,
+    "net_realized_pnl": 1422.20301657253,
     "gross_win": 1653.707,
-    "gross_loss": 231.4243,
-    "profit_factor": 7.1458,
-    "avg_holding_time_seconds": 335232.0
+    "gross_loss": 231.504,
+    "profit_factor": 7.1433,
+    "avg_holding_time_seconds": 334368.0
   },
-  "generated_at": "2026-07-15T23:51:16.550153"
+  "generated_at": "2026-07-16T23:19:47.365848"
 }

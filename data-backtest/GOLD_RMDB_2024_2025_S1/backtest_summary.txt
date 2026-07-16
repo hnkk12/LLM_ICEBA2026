@@ -2,19 +2,19 @@
 | Metric           | Value                    |
 +------------------+--------------------------+
 | Model            | RMDB                     |
-| Asset            | AAPL                     |
+| Asset            | GOLD                     |
 | Crisis Period    | 2024-01-01 to 2025-12-31 |
 | Initial Capital  | $1,000.00                |
-| Final Capital    | $922.96                  |
-| Net Profit       | -$77.04                  |
-| Return %         | -7.70%                   |
-| Total Trades     | 58                       |
-| Win Rate         | 31.0%                    |
-| Profit Factor    | 0.64                     |
-| Sharpe Ratio     | -0.96                    |
-| Sortino Ratio    | -1.34                    |
-| Maximum Drawdown | 9.75%                    |
-| Recovery Factor  | -0.79                    |
-| VaR/CVaR (95%)   | 0.33% / 0.73%            |
-| Avg Holding Time | 6.7d                     |
+| Final Capital    | $1,042.69                |
+| Net Profit       | +$42.69                  |
+| Return %         | +4.27%                   |
+| Total Trades     | 131                      |
+| Win Rate         | 32.8%                    |
+| Profit Factor    | 0.77                     |
+| Sharpe Ratio     | 0.62                     |
+| Sortino Ratio    | 0.95                     |
+| Maximum Drawdown | 4.02%                    |
+| Recovery Factor  | 1.06                     |
+| VaR/CVaR (95%)   | 0.00% / 0.02%            |
+| Avg Holding Time | 6.5d                     |
 +------------------+--------------------------+

@@ -1,0 +1,20 @@
++------------------+--------------------------+
+| Metric           | Value                    |
++------------------+--------------------------+
+| Model            | RMDB                     |
+| Asset            | AAPL                     |
+| Crisis Period    | 2008-01-01 to 2009-12-31 |
+| Initial Capital  | $1,000.00                |
+| Final Capital    | $888.26                  |
+| Net Profit       | -$111.74                 |
+| Return %         | -11.17%                  |
+| Total Trades     | 52                       |
+| Win Rate         | 15.4%                    |
+| Profit Factor    | 0.45                     |
+| Sharpe Ratio     | -1.00                    |
+| Sortino Ratio    | -1.40                    |
+| Maximum Drawdown | 11.71%                   |
+| Recovery Factor  | -0.95                    |
+| VaR/CVaR (95%)   | 0.37% / 0.85%            |
+| Avg Holding Time | 8.2d                     |
++------------------+--------------------------+

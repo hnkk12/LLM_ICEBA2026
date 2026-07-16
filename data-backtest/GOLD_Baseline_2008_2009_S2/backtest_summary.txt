@@ -2,19 +2,19 @@
 | Metric           | Value                    |
 +------------------+--------------------------+
 | Model            | Rule-Based Baseline      |
-| Asset            | AAPL                     |
+| Asset            | GOLD                     |
 | Crisis Period    | 2008-01-01 to 2009-12-31 |
 | Initial Capital  | $1,000.00                |
-| Final Capital    | $1,041.85                |
-| Net Profit       | +$41.85                  |
-| Return %         | +4.19%                   |
-| Total Trades     | 75                       |
-| Win Rate         | 40.0%                    |
-| Profit Factor    | 0.94                     |
-| Sharpe Ratio     | 0.51                     |
-| Sortino Ratio    | 0.73                     |
-| Maximum Drawdown | 6.90%                    |
-| Recovery Factor  | 0.61                     |
-| VaR/CVaR (95%)   | 0.42% / 0.76%            |
+| Final Capital    | $931.25                  |
+| Net Profit       | -$68.75                  |
+| Return %         | -6.87%                   |
+| Total Trades     | 186                      |
+| Win Rate         | 41.4%                    |
+| Profit Factor    | 1.07                     |
+| Sharpe Ratio     | -0.65                    |
+| Sortino Ratio    | -0.87                    |
+| Maximum Drawdown | 16.69%                   |
+| Recovery Factor  | -0.41                    |
+| VaR/CVaR (95%)   | 0.49% / 0.82%            |
 | Avg Holding Time | 8.1d                     |
 +------------------+--------------------------+

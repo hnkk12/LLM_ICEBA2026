@@ -4,9 +4,9 @@
   "cache_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest2\\cache",
   "timeframe": {
     "start": "2024-01-01T00:00:00",
-    "end": "2025-12-31T00:00:00",
+    "end": "2025-12-30T00:00:00",
     "interval": "1d",
-    "bars": 519
+    "bars": 518
   },
   "symbols": [
     "Gold"
@@ -29,7 +29,6 @@
     "gross_loss": 0
   },
   "daily_returns": [
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -1067,7 +1066,6 @@
     1000.0,
     1000.0,
     1000.0,
-    1000.0,
     1000.0
   ],
   "llm": {
@@ -1097,5 +1095,5 @@
     "profit_factor": 0,
     "avg_holding_time_seconds": 0.0
   },
-  "generated_at": "2026-07-14T16:31:18.803339"
+  "generated_at": "2026-07-16T23:19:42.346894"
 }

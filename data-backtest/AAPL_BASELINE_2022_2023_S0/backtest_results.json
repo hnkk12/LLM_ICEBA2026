@@ -1,10 +1,10 @@
 {
-  "run_id": "AAPL_BASELINE_2022_2023_S0",
-  "run_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest\\AAPL_BASELINE_2022_2023_S0",
+  "run_id": "AAPL_Baseline_2022_2023_S0",
+  "run_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest\\AAPL_Baseline_2022_2023_S0",
   "cache_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest\\cache",
   "timeframe": {
     "start": "2022-01-01T00:00:00+00:00",
-    "end": "2023-12-31T23:59:59+00:00",
+    "end": "2023-12-31T00:00:00+00:00",
     "interval": "1d",
     "bars": 501
   },
@@ -19,14 +19,14 @@
     "total_return_pct": -10.051517847230036,
     "max_drawdown_pct": 10.594141086846468,
     "recovery_factor": -0.9487808180797077,
-    "profit_factor": 0.6551701510319454,
+    "profit_factor": 0.6912917808432165,
     "win_rate_pct": 34.146341463414636,
-    "sharpe_ratio": -1.079991824990439,
-    "sortino_ratio": -1.469110088413759,
+    "sharpe_ratio": -0.8973757023794013,
+    "sortino_ratio": -1.2206978487773574,
     "var_95_pct": 0.5351003879915966,
     "cvar_95_pct": 0.837328149303219,
-    "gross_profit": 572.5261380049736,
-    "gross_loss": 873.8587023587676
+    "gross_profit": 1197.3636454083528,
+    "gross_loss": 1732.0669485580247
   },
   "daily_returns": [
     0.0,
@@ -1274,22 +1274,22 @@
     }
   },
   "trading": {
-    "total_trades": 123,
-    "closed_trades": 123,
+    "total_trades": 246,
+    "closed_trades": 246,
     "partial_closes": 0,
-    "close_events": 123,
-    "winning_trades": 42,
-    "losing_trades": 81,
+    "close_events": 246,
+    "winning_trades": 84,
+    "losing_trades": 162,
     "breakeven_trades": 0,
     "win_rate_pct": 34.146341463414636,
-    "net_realized_pnl": -301.3325643537938,
-    "gross_win": 572.5261380049736,
-    "gross_loss": 873.8587023587676,
-    "profit_factor": 0.6551701510319454,
-    "avg_trade_pnl": -2.4498582467788115,
-    "avg_holding_time_seconds": 636572.9032258064,
-    "max_consecutive_wins": 12,
-    "max_consecutive_losses": 21
+    "net_realized_pnl": -534.7033031496721,
+    "gross_win": 1197.3636454083528,
+    "gross_loss": 1732.0669485580247,
+    "profit_factor": 0.6912917808432165,
+    "avg_trade_pnl": -2.1735906632100495,
+    "avg_holding_time_seconds": 632341.3881748072,
+    "max_consecutive_wins": 24,
+    "max_consecutive_losses": 42
   },
   "generated_at": "2023-12-29T00:00:00+00:00"
 }

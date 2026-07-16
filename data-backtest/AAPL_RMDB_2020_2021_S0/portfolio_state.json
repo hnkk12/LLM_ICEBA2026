@@ -1,16 +1,16 @@
 {
-  "balance": 985.653418178146,
+  "balance": 991.0633938224482,
   "positions": {},
   "performance": {
-    "total_net_profit": -14.346581821853988,
-    "total_return_pct": -1.4346581821853988,
-    "max_drawdown_pct": 9.087653254869256,
-    "recovery_factor": -0.1578689395325129,
-    "profit_factor": 0.9499622401823988,
-    "win_rate_pct": 41.66666666666667,
-    "total_trades": 96,
-    "winning_trades": 40,
-    "losing_trades": 56
+    "total_net_profit": -8.936606177551766,
+    "total_return_pct": -0.8936606177551767,
+    "max_drawdown_pct": 9.087653254869268,
+    "recovery_factor": -0.0983378868770486,
+    "profit_factor": 1.0301399262414241,
+    "win_rate_pct": 42.19409282700422,
+    "total_trades": 237,
+    "winning_trades": 100,
+    "losing_trades": 137
   },
   "iteration": 505,
   "updated_at": "2021-12-31T00:00:00+00:00"

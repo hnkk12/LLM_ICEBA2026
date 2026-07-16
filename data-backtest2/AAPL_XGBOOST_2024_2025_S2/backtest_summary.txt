@@ -5,14 +5,14 @@
 | Asset            | AAPL             |
 | Crisis Period    | 2024-2025 (S2)   |
 | Initial Capital  | $1,000.00        |
-| Final Capital    | $2,618.68        |
-| Net Profit       | +$1,618.68       |
+| Final Capital    | $2,618.67        |
+| Net Profit       | +$1,618.67       |
 | Return %         | +161.87%         |
 | Total Trades     | 86               |
 | Win Rate         | 47.7%            |
 | Profit Factor    | 12.05            |
 | Sharpe Ratio     | 1.50             |
-| Sortino Ratio    | 18.26            |
+| Sortino Ratio    | 18.30            |
 | Maximum Drawdown | 3.94%            |
 | Recovery Factor  | 41.03            |
 | VaR/CVaR (95%)   | 0.06% / 0.36%    |

@@ -5,16 +5,16 @@
 | Asset            | AAPL                     |
 | Crisis Period    | 2022-01-01 to 2023-12-31 |
 | Initial Capital  | $1,000.00                |
-| Final Capital    | $899.46                  |
-| Net Profit       | -$100.54                 |
-| Return %         | -10.05%                  |
-| Total Trades     | 82                       |
+| Final Capital    | $948.14                  |
+| Net Profit       | -$51.86                  |
+| Return %         | -5.19%                   |
+| Total Trades     | 205                      |
 | Win Rate         | 34.1%                    |
-| Profit Factor    | 0.73                     |
-| Sharpe Ratio     | -1.07                    |
-| Sortino Ratio    | -1.45                    |
-| Maximum Drawdown | 10.60%                   |
-| Recovery Factor  | -0.95                    |
-| VaR/CVaR (95%)   | 0.54% / 0.85%            |
-| Avg Holding Time | 7.4d                     |
+| Profit Factor    | 0.76                     |
+| Sharpe Ratio     | -0.41                    |
+| Sortino Ratio    | -0.58                    |
+| Maximum Drawdown | 7.57%                    |
+| Recovery Factor  | -0.68                    |
+| VaR/CVaR (95%)   | 0.55% / 0.85%            |
+| Avg Holding Time | 7.2d                     |
 +------------------+--------------------------+

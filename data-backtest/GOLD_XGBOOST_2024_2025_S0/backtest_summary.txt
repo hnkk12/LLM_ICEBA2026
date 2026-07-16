@@ -12,7 +12,7 @@
 | Win Rate         | 46.7%            |
 | Profit Factor    | 0.65             |
 | Sharpe Ratio     | -0.75            |
-| Sortino Ratio    | -0.53            |
+| Sortino Ratio    | -0.54            |
 | Maximum Drawdown | 6.15%            |
 | Recovery Factor  | -0.62            |
 | VaR/CVaR (95%)   | 0.21% / 0.46%    |

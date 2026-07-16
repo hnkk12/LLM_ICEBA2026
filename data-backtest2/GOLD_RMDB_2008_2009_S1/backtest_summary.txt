@@ -1,0 +1,20 @@
++------------------+--------------------------+
+| Metric           | Value                    |
++------------------+--------------------------+
+| Model            | RMDB                     |
+| Asset            | GOLD                     |
+| Crisis Period    | 2008-01-01 to 2009-12-31 |
+| Initial Capital  | $1,000.00                |
+| Final Capital    | $824.39                  |
+| Net Profit       | -$175.61                 |
+| Return %         | -17.56%                  |
+| Total Trades     | 55                       |
+| Win Rate         | 14.5%                    |
+| Profit Factor    | 0.33                     |
+| Sharpe Ratio     | -1.98                    |
+| Sortino Ratio    | -2.20                    |
+| Maximum Drawdown | 19.43%                   |
+| Recovery Factor  | -0.90                    |
+| VaR/CVaR (95%)   | 0.35% / 0.86%            |
+| Avg Holding Time | 8.4d                     |
++------------------+--------------------------+

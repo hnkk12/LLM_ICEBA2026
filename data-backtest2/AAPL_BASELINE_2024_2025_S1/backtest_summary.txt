@@ -1,0 +1,20 @@
++------------------+--------------------------+
+| Metric           | Value                    |
++------------------+--------------------------+
+| Model            | Rule-Based Baseline      |
+| Asset            | AAPL                     |
+| Crisis Period    | 2024-01-01 to 2025-12-31 |
+| Initial Capital  | $1,000.00                |
+| Final Capital    | $892.68                  |
+| Net Profit       | -$107.32                 |
+| Return %         | -10.73%                  |
+| Total Trades     | 72                       |
+| Win Rate         | 23.6%                    |
+| Profit Factor    | 0.59                     |
+| Sharpe Ratio     | -0.89                    |
+| Sortino Ratio    | -1.19                    |
+| Maximum Drawdown | 15.76%                   |
+| Recovery Factor  | -0.68                    |
+| VaR/CVaR (95%)   | 0.29% / 0.95%            |
+| Avg Holding Time | 5.9d                     |
++------------------+--------------------------+

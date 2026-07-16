@@ -11,7 +11,7 @@
 | Total Trades     | 19             |
 | Win Rate         | 31.6%          |
 | Profit Factor    | 0.01           |
-| Sharpe Ratio     | -2.04          |
+| Sharpe Ratio     | -2.05          |
 | Sortino Ratio    | -0.63          |
 | Maximum Drawdown | 7.84%          |
 | Recovery Factor  | -1.00          |

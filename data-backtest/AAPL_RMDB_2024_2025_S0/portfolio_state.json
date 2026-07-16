@@ -6,11 +6,11 @@
     "total_return_pct": -7.704105536318321,
     "max_drawdown_pct": 9.75373711296106,
     "recovery_factor": -0.7898619213430382,
-    "profit_factor": 0.6408641199993563,
+    "profit_factor": 0.6816943275140509,
     "win_rate_pct": 31.03448275862069,
-    "total_trades": 58,
-    "winning_trades": 18,
-    "losing_trades": 40
+    "total_trades": 145,
+    "winning_trades": 45,
+    "losing_trades": 100
   },
   "iteration": 502,
   "updated_at": "2025-12-31T00:00:00+00:00"

@@ -1,13 +1,13 @@
 Feature,Group,Mean_Abs_SHAP
-close_pct_1d,returns,0.3022386
-macd_signal,MACD,0.16426533
-macd,MACD,0.16211654
-ema_50,EMA,0.15995133
-macd_hist,MACD,0.14748718
-close_pct_5d,returns,0.14731944
-rsi_14,RSI,0.14613634
-ema_20,EMA,0.14244486
-atr_14,ATR,0.14054549
-volume_ratio,volume ratio,0.13565533
-close_pct_20d,returns,0.111966394
-vol_gate_flag,volatility gate,0.0038455206
+close_pct_1d,returns,0.3023102
+macd_signal,MACD,0.1643156
+macd,MACD,0.16218427
+ema_50,EMA,0.15998337
+macd_hist,MACD,0.14749739
+close_pct_5d,returns,0.14731374
+rsi_14,RSI,0.14615889
+ema_20,EMA,0.14241336
+atr_14,ATR,0.14054692
+volume_ratio,volume ratio,0.13560846
+close_pct_20d,returns,0.11199285
+vol_gate_flag,volatility gate,0.0038467958

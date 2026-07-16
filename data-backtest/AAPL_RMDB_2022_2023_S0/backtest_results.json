@@ -4,7 +4,7 @@
   "cache_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest\\cache",
   "timeframe": {
     "start": "2022-01-01T00:00:00+00:00",
-    "end": "2023-12-31T23:59:59+00:00",
+    "end": "2023-12-31T00:00:00+00:00",
     "interval": "1d",
     "bars": 501
   },
@@ -19,14 +19,14 @@
     "total_return_pct": -10.05404902511566,
     "max_drawdown_pct": 10.5966649898411,
     "recovery_factor": -0.9487937039393395,
-    "profit_factor": 0.6551159270291677,
+    "profit_factor": 0.6987532759555005,
     "win_rate_pct": 34.146341463414636,
-    "sharpe_ratio": -1.074048066943566,
-    "sortino_ratio": -1.4548006982060773,
+    "sharpe_ratio": -0.8924369760588264,
+    "sortino_ratio": -1.208808037399986,
     "var_95_pct": 0.5441100776984148,
     "cvar_95_pct": 0.8503784922954248,
-    "gross_profit": 381.55596694393506,
-    "gross_loss": 582.4251116504256
+    "gross_profit": 1006.3975694260788,
+    "gross_loss": 1440.2759944844543
   },
   "daily_returns": [
     0.0,
@@ -1274,22 +1274,22 @@
     }
   },
   "trading": {
-    "total_trades": 82,
-    "closed_trades": 82,
+    "total_trades": 205,
+    "closed_trades": 205,
     "partial_closes": 0,
-    "close_events": 82,
-    "winning_trades": 28,
-    "losing_trades": 54,
+    "close_events": 205,
+    "winning_trades": 70,
+    "losing_trades": 135,
     "breakeven_trades": 0,
     "win_rate_pct": 34.146341463414636,
-    "net_realized_pnl": -200.86914470649054,
-    "gross_win": 381.55596694393506,
-    "gross_loss": 582.4251116504256,
-    "profit_factor": 0.6551159270291677,
-    "avg_trade_pnl": -2.4496237159328116,
-    "avg_holding_time_seconds": 643474.2857142857,
-    "max_consecutive_wins": 8,
-    "max_consecutive_losses": 14
+    "net_realized_pnl": -433.87842505837534,
+    "gross_win": 1006.3975694260788,
+    "gross_loss": 1440.2759944844543,
+    "profit_factor": 0.6987532759555005,
+    "avg_trade_pnl": -2.1164801222359775,
+    "avg_holding_time_seconds": 625460.8695652174,
+    "max_consecutive_wins": 20,
+    "max_consecutive_losses": 35
   },
   "generated_at": "2023-12-29T00:00:00+00:00"
 }

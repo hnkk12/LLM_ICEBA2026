@@ -2,19 +2,19 @@
 | Metric           | Value                    |
 +------------------+--------------------------+
 | Model            | RMDB                     |
-| Asset            | AAPL                     |
+| Asset            | GOLD                     |
 | Crisis Period    | 2008-01-01 to 2009-12-31 |
 | Initial Capital  | $1,000.00                |
-| Final Capital    | $998.30                  |
-| Net Profit       | -$1.70                   |
-| Return %         | -0.17%                   |
-| Total Trades     | 61                       |
-| Win Rate         | 36.1%                    |
-| Profit Factor    | 0.80                     |
-| Sharpe Ratio     | 0.01                     |
-| Sortino Ratio    | 0.01                     |
-| Maximum Drawdown | 6.37%                    |
-| Recovery Factor  | -0.03                    |
-| VaR/CVaR (95%)   | 0.38% / 0.72%            |
-| Avg Holding Time | 8.5d                     |
+| Final Capital    | $920.04                  |
+| Net Profit       | -$79.96                  |
+| Return %         | -8.00%                   |
+| Total Trades     | 150                      |
+| Win Rate         | 37.3%                    |
+| Profit Factor    | 0.90                     |
+| Sharpe Ratio     | -0.80                    |
+| Sortino Ratio    | -1.03                    |
+| Maximum Drawdown | 15.30%                   |
+| Recovery Factor  | -0.52                    |
+| VaR/CVaR (95%)   | 0.47% / 0.81%            |
+| Avg Holding Time | 8.6d                     |
 +------------------+--------------------------+

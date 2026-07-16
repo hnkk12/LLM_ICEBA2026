@@ -4,28 +4,28 @@
   "cache_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest2\\cache",
   "timeframe": {
     "start": "2024-01-02T00:00:00",
-    "end": "2025-12-31T00:00:00",
+    "end": "2025-12-30T00:00:00",
     "interval": "1d",
-    "bars": 502
+    "bars": 501
   },
   "symbols": [
     "AAPL"
   ],
   "capital": {
     "start": 1000.0,
-    "final_balance": 2618.677196375486,
-    "final_equity": 2618.677196375486,
-    "total_net_profit": 1618.677196375486,
-    "total_return_pct": 161.8677,
+    "final_balance": 2618.6715408358696,
+    "final_equity": 2618.6715408358696,
+    "total_net_profit": 1618.6715408358696,
+    "total_return_pct": 161.8672,
     "max_drawdown_pct": 3.945,
-    "recovery_factor": 41.0311,
+    "recovery_factor": 41.031,
     "profit_factor": 12.0522,
     "win_rate_pct": 47.67,
-    "sharpe_ratio": 1.4956,
-    "sortino_ratio": 18.263,
-    "var_95_pct": 0.061562252922073096,
+    "sharpe_ratio": 1.4971,
+    "sortino_ratio": 18.2994,
+    "var_95_pct": 0.06171914350472314,
     "cvar_95_pct": 0.35723741887992716,
-    "gross_profit": 1765.1342,
+    "gross_profit": 1765.1285,
     "gross_loss": 146.457
   },
   "daily_returns": [
@@ -529,8 +529,7 @@
     0.0,
     -2.132032708108842e-06,
     8.477685294568173e-06,
-    8.958085644536103e-06,
-    1.2711974060667262e-09
+    6.799644196056323e-06
   ],
   "equity_history": [
     999.978758016752,
@@ -1033,8 +1032,7 @@
     2618.6371180081296,
     2618.6315349881434,
     2618.6537349221994,
-    2618.6771930466302,
-    2618.677196375486
+    2618.6715408358696
   ],
   "llm": {
     "model": "XGBoost Baseline",
@@ -1057,11 +1055,11 @@
     "winning_trades": 41,
     "losing_trades": 45,
     "win_rate_pct": 47.67,
-    "net_realized_pnl": 1618.677196375486,
-    "gross_win": 1765.1342,
+    "net_realized_pnl": 1618.6715408358696,
+    "gross_win": 1765.1285,
     "gross_loss": 146.457,
     "profit_factor": 12.0522,
-    "avg_holding_time_seconds": 335232.0
+    "avg_holding_time_seconds": 334368.0
   },
-  "generated_at": "2026-07-15T23:51:16.669017"
+  "generated_at": "2026-07-16T23:19:47.468184"
 }

@@ -1,17 +1,17 @@
 {
-  "balance": 1041.8500270236832,
+  "balance": 931.2507672797533,
   "positions": {},
   "performance": {
-    "total_net_profit": 41.8500270236832,
-    "total_return_pct": 4.18500270236832,
-    "max_drawdown_pct": 6.901769909264188,
-    "recovery_factor": 0.6063665925389408,
-    "profit_factor": 0.9430893616248324,
-    "win_rate_pct": 40.0,
-    "total_trades": 75,
-    "winning_trades": 30,
-    "losing_trades": 45
+    "total_net_profit": -68.74923272024671,
+    "total_return_pct": -6.87492327202467,
+    "max_drawdown_pct": 16.68592536858135,
+    "recovery_factor": -0.4120192989098321,
+    "profit_factor": 1.0725514964940552,
+    "win_rate_pct": 41.39784946236559,
+    "total_trades": 186,
+    "winning_trades": 77,
+    "losing_trades": 109
   },
-  "iteration": 505,
+  "iteration": 507,
   "updated_at": "2009-12-31T00:00:00+00:00"
 }

@@ -2,19 +2,19 @@
 | Metric           | Value                    |
 +------------------+--------------------------+
 | Model            | Rule-Based Baseline      |
-| Asset            | AAPL                     |
+| Asset            | GOLD                     |
 | Crisis Period    | 2020-01-01 to 2021-12-31 |
 | Initial Capital  | $1,000.00                |
-| Final Capital    | $990.39                  |
-| Net Profit       | -$9.61                   |
-| Return %         | -0.96%                   |
-| Total Trades     | 96                       |
-| Win Rate         | 38.5%                    |
-| Profit Factor    | 0.88                     |
-| Sharpe Ratio     | -0.03                    |
-| Sortino Ratio    | -0.04                    |
-| Maximum Drawdown | 8.71%                    |
-| Recovery Factor  | -0.11                    |
-| VaR/CVaR (95%)   | 0.78% / 1.11%            |
-| Avg Holding Time | 8.6d                     |
+| Final Capital    | $931.37                  |
+| Net Profit       | -$68.63                  |
+| Return %         | -6.86%                   |
+| Total Trades     | 251                      |
+| Win Rate         | 39.4%                    |
+| Profit Factor    | 0.98                     |
+| Sharpe Ratio     | -0.50                    |
+| Sortino Ratio    | -0.69                    |
+| Maximum Drawdown | 10.68%                   |
+| Recovery Factor  | -0.64                    |
+| VaR/CVaR (95%)   | 0.47% / 0.95%            |
+| Avg Holding Time | 8.1d                     |
 +------------------+--------------------------+

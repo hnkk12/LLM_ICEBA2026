@@ -4,7 +4,7 @@
   "cache_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest\\cache",
   "timeframe": {
     "start": "2008-01-01T00:00:00+00:00",
-    "end": "2009-12-31T23:59:59+00:00",
+    "end": "2009-12-31T00:00:00+00:00",
     "interval": "1d",
     "bars": 505
   },
@@ -19,14 +19,14 @@
     "total_return_pct": 4.18500270236832,
     "max_drawdown_pct": 6.901769909264188,
     "recovery_factor": 0.6063665925389408,
-    "profit_factor": 1.2241333774799399,
-    "win_rate_pct": 47.74774774774775,
-    "sharpe_ratio": 0.5144588461030632,
-    "sortino_ratio": 0.7300516981935309,
+    "profit_factor": 1.2914419187182287,
+    "win_rate_pct": 47.48858447488584,
+    "sharpe_ratio": 0.4274688545638943,
+    "sortino_ratio": 0.6066070504241957,
     "var_95_pct": 0.42371493881800887,
     "cvar_95_pct": 0.7551768224961559,
-    "gross_profit": 774.7996255356662,
-    "gross_loss": 632.9372597704232
+    "gross_profit": 1603.2686534179663,
+    "gross_loss": 1241.4562592247505
   },
   "daily_returns": [
     0.0,
@@ -1282,22 +1282,22 @@
     }
   },
   "trading": {
-    "total_trades": 111,
-    "closed_trades": 111,
+    "total_trades": 219,
+    "closed_trades": 219,
     "partial_closes": 0,
-    "close_events": 111,
-    "winning_trades": 53,
-    "losing_trades": 58,
+    "close_events": 219,
+    "winning_trades": 104,
+    "losing_trades": 115,
     "breakeven_trades": 0,
-    "win_rate_pct": 47.74774774774775,
-    "net_realized_pnl": 141.86236576524306,
-    "gross_win": 774.7996255356662,
-    "gross_loss": 632.9372597704232,
-    "profit_factor": 1.2241333774799399,
-    "avg_trade_pnl": 1.278039331218406,
-    "avg_holding_time_seconds": 714279.4520547945,
-    "max_consecutive_wins": 18,
-    "max_consecutive_losses": 12
+    "win_rate_pct": 47.48858447488584,
+    "net_realized_pnl": 361.81239419321605,
+    "gross_win": 1603.2686534179663,
+    "gross_loss": 1241.4562592247505,
+    "profit_factor": 1.2914419187182287,
+    "avg_trade_pnl": 1.652111389010119,
+    "avg_holding_time_seconds": 703506.976744186,
+    "max_consecutive_wins": 36,
+    "max_consecutive_losses": 24
   },
   "generated_at": "2009-12-31T00:00:00+00:00"
 }

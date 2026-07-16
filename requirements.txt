@@ -12,3 +12,7 @@ scipy==1.17.1
 xgboost==3.2.0
 lightgbm==4.6.0
 ta==0.11.0
+matplotlib==3.10.9
+seaborn==0.13.2
+Pillow==10.4.0
+python-docx==1.2.0

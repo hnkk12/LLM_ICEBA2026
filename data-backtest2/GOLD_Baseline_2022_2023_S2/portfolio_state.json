@@ -1,0 +1,17 @@
+{
+  "balance": 850.6794725029233,
+  "positions": {},
+  "performance": {
+    "total_net_profit": -149.32052749707668,
+    "total_return_pct": -14.932052749707669,
+    "max_drawdown_pct": 16.855811285681057,
+    "recovery_factor": -0.8858697155913454,
+    "profit_factor": 0.2906604447361806,
+    "win_rate_pct": 16.071428571428573,
+    "total_trades": 56,
+    "winning_trades": 9,
+    "losing_trades": 47
+  },
+  "iteration": 406,
+  "updated_at": "2023-12-28T00:00:00+00:00"
+}

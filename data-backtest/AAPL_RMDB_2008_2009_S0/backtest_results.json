@@ -4,7 +4,7 @@
   "cache_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest\\cache",
   "timeframe": {
     "start": "2008-01-01T00:00:00+00:00",
-    "end": "2009-12-31T23:59:59+00:00",
+    "end": "2009-12-31T00:00:00+00:00",
     "interval": "1d",
     "bars": 505
   },
@@ -19,14 +19,14 @@
     "total_return_pct": -0.17041117968516348,
     "max_drawdown_pct": 6.367749854337518,
     "recovery_factor": -0.026761600813996256,
-    "profit_factor": 0.9903513017230283,
+    "profit_factor": 1.069175413105415,
     "win_rate_pct": 42.857142857142854,
-    "sharpe_ratio": 0.007740574227718161,
-    "sortino_ratio": 0.010738480382191577,
+    "sharpe_ratio": 0.0064317183460902315,
+    "sortino_ratio": 0.008922707702479042,
     "var_95_pct": 0.3757725078129009,
     "cvar_95_pct": 0.7151149176470253,
-    "gross_profit": 350.4135697175884,
-    "gross_loss": 353.8275449408039
+    "gross_profit": 930.7408322326372,
+    "gross_loss": 870.5221059370461
   },
   "daily_returns": [
     0.0,
@@ -1282,22 +1282,22 @@
     }
   },
   "trading": {
-    "total_trades": 56,
-    "closed_trades": 56,
+    "total_trades": 140,
+    "closed_trades": 140,
     "partial_closes": 0,
-    "close_events": 56,
-    "winning_trades": 24,
-    "losing_trades": 32,
+    "close_events": 140,
+    "winning_trades": 60,
+    "losing_trades": 80,
     "breakeven_trades": 0,
     "win_rate_pct": 42.857142857142854,
-    "net_realized_pnl": -3.413975223215454,
-    "gross_win": 350.4135697175884,
-    "gross_loss": 353.8275449408039,
-    "profit_factor": 0.9903513017230283,
-    "avg_trade_pnl": -0.06096384327170453,
-    "avg_holding_time_seconds": 719570.1492537314,
-    "max_consecutive_wins": 6,
-    "max_consecutive_losses": 10
+    "net_realized_pnl": 60.21872629559108,
+    "gross_win": 930.7408322326372,
+    "gross_loss": 870.5221059370461,
+    "profit_factor": 1.069175413105415,
+    "avg_trade_pnl": 0.43013375925422204,
+    "avg_holding_time_seconds": 698914.2857142857,
+    "max_consecutive_wins": 15,
+    "max_consecutive_losses": 25
   },
   "generated_at": "2009-12-31T00:00:00+00:00"
 }

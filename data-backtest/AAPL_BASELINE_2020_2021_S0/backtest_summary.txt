@@ -8,13 +8,13 @@
 | Final Capital    | $990.39                  |
 | Net Profit       | -$9.61                   |
 | Return %         | -0.96%                   |
-| Total Trades     | 177                      |
+| Total Trades     | 354                      |
 | Win Rate         | 42.4%                    |
-| Profit Factor    | 0.98                     |
-| Sharpe Ratio     | -0.03                    |
-| Sortino Ratio    | -0.04                    |
+| Profit Factor    | 1.03                     |
+| Sharpe Ratio     | -0.02                    |
+| Sortino Ratio    | -0.03                    |
 | Maximum Drawdown | 8.71%                    |
 | Recovery Factor  | -0.11                    |
 | VaR/CVaR (95%)   | 0.78% / 1.11%            |
-| Avg Holding Time | 7.7d                     |
+| Avg Holding Time | 7.9d                     |
 +------------------+--------------------------+

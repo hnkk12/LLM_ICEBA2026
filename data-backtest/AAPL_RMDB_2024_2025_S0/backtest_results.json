@@ -4,7 +4,7 @@
   "cache_directory": "D:\\NCKH\\LLM_ICEBA2026\\data-backtest\\cache",
   "timeframe": {
     "start": "2024-01-01T00:00:00+00:00",
-    "end": "2025-12-31T23:59:59+00:00",
+    "end": "2025-12-31T00:00:00+00:00",
     "interval": "1d",
     "bars": 502
   },
@@ -19,14 +19,14 @@
     "total_return_pct": -7.704105536318321,
     "max_drawdown_pct": 9.75373711296106,
     "recovery_factor": -0.7898619213430382,
-    "profit_factor": 0.6408641199993563,
+    "profit_factor": 0.6816943275140509,
     "win_rate_pct": 31.03448275862069,
-    "sharpe_ratio": -0.9606981523247575,
-    "sortino_ratio": -1.3395852962117913,
+    "sharpe_ratio": -0.7982534305059712,
+    "sortino_ratio": -1.113074440258672,
     "var_95_pct": 0.3250479799072131,
     "cvar_95_pct": 0.7338891141585023,
-    "gross_profit": 274.649048186139,
-    "gross_loss": 428.5605007601531
+    "gross_profit": 722.5955844001853,
+    "gross_loss": 1059.9994091711014
   },
   "daily_returns": [
     0.0,
@@ -1279,22 +1279,22 @@
     }
   },
   "trading": {
-    "total_trades": 58,
-    "closed_trades": 58,
+    "total_trades": 145,
+    "closed_trades": 145,
     "partial_closes": 0,
-    "close_events": 58,
-    "winning_trades": 18,
-    "losing_trades": 40,
+    "close_events": 145,
+    "winning_trades": 45,
+    "losing_trades": 100,
     "breakeven_trades": 0,
     "win_rate_pct": 31.03448275862069,
-    "net_realized_pnl": -153.91145257401413,
-    "gross_win": 274.649048186139,
-    "gross_loss": 428.5605007601531,
-    "profit_factor": 0.6408641199993563,
-    "avg_trade_pnl": -2.6536457340347264,
-    "avg_holding_time_seconds": 580461.9718309859,
-    "max_consecutive_wins": 4,
-    "max_consecutive_losses": 12
+    "net_realized_pnl": -337.40382477091583,
+    "gross_win": 722.5955844001853,
+    "gross_loss": 1059.9994091711014,
+    "profit_factor": 0.6816943275140509,
+    "avg_trade_pnl": -2.326922929454592,
+    "avg_holding_time_seconds": 586312.6637554585,
+    "max_consecutive_wins": 10,
+    "max_consecutive_losses": 30
   },
   "generated_at": "2025-12-31T00:00:00+00:00"
 }

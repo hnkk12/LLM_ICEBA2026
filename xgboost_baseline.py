@@ -14,6 +14,8 @@ import pandas as pd
 from xgboost import XGBClassifier
 import ta
 import shap
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 warnings.filterwarnings("ignore")
@@ -159,9 +161,11 @@ def compute_features(df: pd.DataFrame) -> pd.DataFrame:
 
     # Forward return label (next-day close vs today close direction)
     df["forward_return"]      = df["Close"].shift(-1) / df["Close"] - 1
+    # Keep the final observation out of the supervised sample: its next-day
+    # return is unknown, and comparing NaN > 0 would otherwise label it 0.
     df["forward_return_sign"] = (df["forward_return"] > 0).astype(int)
 
-    df.dropna(subset=FEATURE_COLS + ["forward_return_sign"], inplace=True)
+    df.dropna(subset=FEATURE_COLS + ["forward_return"], inplace=True)
     return df.reset_index(drop=True)
 
 FEATURE_COLS = [

@@ -1,0 +1,20 @@
++------------------+--------------------------+
+| Metric           | Value                    |
++------------------+--------------------------+
+| Model            | Rule-Based Baseline      |
+| Asset            | GOLD                     |
+| Crisis Period    | 2022-01-01 to 2023-12-31 |
+| Initial Capital  | $1,000.00                |
+| Final Capital    | $860.51                  |
+| Net Profit       | -$139.49                 |
+| Return %         | -13.95%                  |
+| Total Trades     | 56                       |
+| Win Rate         | 16.1%                    |
+| Profit Factor    | 0.31                     |
+| Sharpe Ratio     | -1.61                    |
+| Sortino Ratio    | -1.92                    |
+| Maximum Drawdown | 16.02%                   |
+| Recovery Factor  | -0.87                    |
+| VaR/CVaR (95%)   | 0.32% / 0.86%            |
+| Avg Holding Time | 8.7d                     |
++------------------+--------------------------+
